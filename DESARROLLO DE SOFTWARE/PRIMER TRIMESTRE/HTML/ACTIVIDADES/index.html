@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <meta name="description" content="Página de inscripción al programa de formación SENA.">
+    <title>Ficha Aprendiz</title>
+</head>
+<body>
+    <header>
+        <h1>Programa de Formación SENA</h1>
+    </header>
+
+<nav>
+ <a href="#inicio">Inicio</a> |
+    <a href="#competencias">Competencias</a> |
+    <a href="#inscripcion">Inscripción</a>
+</nav>
+
+<main>
+     <section id="inicio">
+        <h1>Ficha Aprendiz SENA</h1>
+
+    <p>Bienvenido a la página de inscripción al curso complementario.
+            Aquí encontrarás información sobre las competencias del programa
+            y el formulario de inscripción.</p>
+            </section>
+
+    <section id="competencias">
+
+        <h2>Competencias del programa</h2>
+
+<table border="1">
+
+    <tr>
+        <th colspan="2">Competencias del Programa</th>
+    </tr>
+
+    <tr>
+        <th>Competencia</th>
+        <th>Estado</th>
+    </tr>
+
+    <tr>
+        <td>HTML5</td>
+        <td>En proceso</td>
+    </tr>
+
+    <tr>
+        <td>CSS3</td>
+        <td>Pendiente</td>
+    </tr>
+
+    <tr>
+        <td>Git y GitHub</td>
+        <td>En proceso</td>
+    </tr>
+
+</table>
+
+    </section>
+
+    <section id="inscripcion">
+        <h2>Inscripción a Curso Complementario</h2>
+
+<form>
+    
+    
+    <label for="nombre">Nombre:</label><br>
+    <input type="text" id="nombre" name="nombre" required>
+
+    <br><br>
+
+    <label for="correo">Correo electrónico:</label><br>
+    <input type="email" id="correo" name="correo" required>
+
+    <br><br>
+
+    <label for="fecha">Fecha de nacimiento:</label><br>
+    <input type="date" id="fecha" name="fecha">
+
+    <br><br>
+
+    <label for="curso">Curso:</label><br>
+
+    <select id="curso" name="curso">
+
+        <option>HTML5</option>
+        <option>CSS3</option>
+        <option>Git y GitHub</option>
+
+    </select>
+
+    <br><br>
+
+    <p>Jornada:</p>
+
+    <input type="radio" id="manana" name="jornada">
+    <label for="manana">Mañana</label>
+
+    <input type="radio" id="tarde" name="jornada">
+    <label for="tarde">Tarde</label>
+
+    <br><br>
+
+    <input type="checkbox" id="acepto">
+    <label for="acepto">
+        Acepto los términos y condiciones
+    </label>
+
+<br><br>
+<input type="submit" value="Inscribirme">
+
+</form>
+
+<h2>Logo del SENA</h2>
+
+    <img src="https://upload.wikimedia.org/wikipedia/commons/4/43/Sena_Colombia_logo.svg"
+         alt="Logo institucional del SENA"
+         width="200"
+         height="100">
+    <br><br>
+
+    <p>
+    Página oficial del SENA:
+    <a href="https://www.sena.edu.co" target="_blank">
+        Visitar SENA
+    </a>
+</p>
+
+<div role="button">
+    Guardar información
+</div>
+
+    </section>
+<template id="mensaje">
+    <p>Bienvenido al programa de formación del SENA.</p>
+</template>
+</main>
+
+<footer>
+     <p>© 2026 - Página desarrollada por Christian Mateus</p>
+
+</footer>
+</body>
+</html>

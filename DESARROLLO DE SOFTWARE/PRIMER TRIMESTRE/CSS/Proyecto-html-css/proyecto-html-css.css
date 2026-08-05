@@ -1,0 +1,254 @@
+/* ============================================
+    Proyecto: Página Web con HTML y CSS
+    Programa: Desarrollo de Software - SENA 
+    Autor: Christian Mateus
+    
+    Enfoque:
+    Mobile-first (estilos base = móvil,
+    @media agrega mejoras para pantallas grandes)
+
+    Propiedades implementadas:
+    background-color, color, font-family, width, height, margin,
+    padding, text-align, border, border-radius, box-shadow,
+    text-decoration, font-weight, display
+
+    conceptos aplicados:
+    :hover
+    position (relative, absolute, fixed y sticky)
+    @media
+    Mobile First
+   ============================================ */
+
+/* ---------- Base del documento (móvil primero) ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, sans-serif;
+  background-color: #f5f6fa;
+  color: #222222;
+}
+main {
+  max-width: 1200px;
+  margin: auto;
+}
+/* ---------- Header ---------- */
+header {
+  background-color: #1b1f3b;
+  color: #ffffff;
+  padding: 30px 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-weight: bold;
+}
+
+header p {
+  margin: 8px 0 0 0;
+  color: #cadcfc;
+}
+
+/* ---------- Nav: barra "sticky" ----------
+  position: sticky + top:0 -> se queda pegada arriba
+   apenas la página hace scroll y la alcanza. */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #14172e;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #33a9dc;
+}
+
+nav a {
+  display: inline-block;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 4px 8px;
+  padding: 8px 16px;
+  border: 1px solid #33a9dc;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+/* :hover -> resalta el enlace del menú al pasar el cursor */
+nav a:hover {
+  background-color: #33a9dc;
+  color: #1b1f3b;
+}
+
+/* ---------- Secciones generales ---------- */
+section {
+  padding: 40px 6%;
+  text-align: center;
+}
+
+section h2 {
+  color: #1b1f3b;
+  font-weight: bold;
+  margin: 0 0 25px 0;
+}
+
+/* ---------- Sección: Sobre mí ---------- */
+#sobre-mi img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  margin: 0 auto 25px auto;
+  border: 4px solid #1572b6;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#sobre-mi p {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  line-height:1.7;
+}
+
+/* ---------- Sección: Proyectos ---------- */
+#proyectos {
+  background-color: #ffffff;
+}
+
+/* Móvil: cada tarjeta ocupa todo el ancho, apiladas */
+article {
+  position: relative;          /* contenedor de referencia para la insignia */
+  display: inline-block;
+  width: 100%;
+  height: 260px;
+  margin: 12px 0;
+  padding: 20px;
+  background-color: #f5f6fa;
+  border: 1px solid #dcdfe8;
+  border-radius: 12px;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.08);
+  text-align: center;
+  transition: 0.3s;
+}
+
+/* :hover -> la tarjeta "levanta" su sombra al pasar el cursor */
+article:hover {
+  box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.18);
+  border: 1px solid #1572b6;
+}
+
+/* Insignia posicionada respecto a la tarjeta (position: relative del padre) */
+.badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  margin: 0;
+  padding: 4px 10px;
+  background-color: #1572b6;
+  color: #ffffff;
+  font-weight: bold;
+  border-radius: 12px;
+}
+
+article h3 {
+  color: #1b1f3b;
+  font-weight: bold;
+}
+
+article p {
+  color: #555555;
+}
+
+.btn-link {
+  display: inline-block;
+  background-color: #1572b6;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.btn-link:hover {
+  background-color: #0d5a8a;
+}
+
+/* ---------- Sección: Contacto ---------- */
+#contacto p {
+  margin: 0 0 25px 0;
+}
+
+#contacto .btn-link {
+  margin: 0 10px 10px 0;
+}
+
+button {
+  display: inline-block;
+  background-color: #33a9dc;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.15);
+  transition: 0.3s;
+  cursor: pointer;
+  
+}
+
+button:hover {
+  background-color: #1572b6;
+}
+
+/* ---------- Botón flotante "Subir" ----------
+   position: fixed -> permanece en el mismo lugar de la
+   ventana sin importar cuánto se desplace la página. */
+.volver-arriba {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  border-radius: 50%;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  background-color: #1b1f3b;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE — mobile-first
+   Todo lo anterior es la base para pantallas pequeñas.
+   A partir de aquí, @media agrega mejoras solo para
+   pantallas medianas/grandes (min-width: 768px).
+   ============================================ */
+@media (min-width: 768px) {
+
+  header {
+    padding: 40px 20px;
+  }
+
+  #sobre-mi p {
+    width: 70%;
+  }
+
+  /* En pantallas grandes, las tarjetas se acomodan
+     en fila de a tres en vez de apiladas */
+  article {
+    width: 260px;
+    height: 300px;
+    margin: 15px;
+  }
+}

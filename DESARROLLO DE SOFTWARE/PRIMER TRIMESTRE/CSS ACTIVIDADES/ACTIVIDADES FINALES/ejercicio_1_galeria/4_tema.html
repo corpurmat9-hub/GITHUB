@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modo Claro/Oscuro</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    
+ <header>
+        <h1>Modo claro/oscuro</h1>
+
+        <button id="toggle-tema">
+            Cambiar tema
+        </button>
+    </header>
+
+    <main>
+
+        <section>
+            <h2>Mi página</h2>
+
+            <p>
+                Esta página puede cambiar entre modo claro y modo oscuro
+                utilizando variables CSS.
+            </p>
+        </section>
+
+    </main>
+
+
+<script>
+const botonTema = document.getElementById("toggle-tema");
+
+const html = document.documentElement;
+
+botonTema.addEventListener("click", () => {
+
+    const temaActual = html.getAttribute("data-theme");
+
+    let nuevoTema;
+
+    if (temaActual === "dark") {
+        nuevoTema = "light";
+    } else {
+        nuevoTema = "dark";
+    }
+
+    html.setAttribute("data-theme", nuevoTema);
+
+    localStorage.setItem("tema", nuevoTema);
+
+});
+
+const temaGuardado = localStorage.getItem("tema");
+
+if (temaGuardado) {
+    html.setAttribute("data-theme", temaGuardado);
+}
+</script>
+</scr>
+
+
+</body>
+</html>
